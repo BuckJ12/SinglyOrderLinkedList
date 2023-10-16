@@ -71,6 +71,8 @@ class SortedLinkedList {
                 tail = null;
             }
             head = head.next;
+        }else {
+        	return "No data";
         }
         return n.data;
     }
@@ -112,6 +114,7 @@ class SortedLinkedList {
     }
     
     public SortedLinkedList Sort() {
+    	
     	SortedLinkedList SortedList = new SortedLinkedList();
     	Node curr = head;
 		while (curr!=null) {
