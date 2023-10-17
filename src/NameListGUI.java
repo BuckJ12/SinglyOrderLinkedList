@@ -25,20 +25,21 @@ public class NameListGUI {
 
 	public NameListGUI() {
 		nameList = new SortedLinkedList();
+		// Set the font and font size
+		Font textFont = new Font("Verdana", Font.PLAIN, 20); 
 		frame = new JFrame("Name List");
-		frame.setSize(900, 700);
-		frame.setLocationRelativeTo ( null );
+		frame.setSize(1200, 900);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
 
 		outputTextArea = new JTextArea();
 		outputTextArea.setEditable(false);
 
-		// Set the font and font size
-		Font textFont = new Font("Arial", Font.PLAIN, 18); // Change the font and font size here
+		
 		outputTextArea.setFont(textFont);
 		outputTextArea.setText(COMMANDS);
-
+		
 		frame.add(new JScrollPane(outputTextArea), BorderLayout.CENTER);
 
 
