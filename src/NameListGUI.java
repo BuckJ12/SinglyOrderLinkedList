@@ -42,7 +42,6 @@ public class NameListGUI {
 		frame.add(new JScrollPane(outputTextArea), BorderLayout.CENTER);
 
 
-
 		inputTextField = new JTextField();
 		inputTextField.setFont(textFont);
 
@@ -110,12 +109,13 @@ public class NameListGUI {
 			break;
 		case 's':
 		case '|':
-			outputTextArea.append(nameList.getList() + "\n");
+			String strTemp;
+			outputTextArea.append((strTemp=nameList.getList()) + "\n");
 			if(!nameList.isInOrder()) {
 				nameList = nameList.Sort();
 				outputTextArea.append("|Sorting List|\n");
 				outputTextArea.append(nameList.getList() + "\n");
-			}else {
+			}else if(strTemp!="List is empty"){
 				outputTextArea.append("|List Already Sorted|\n");
 			}
 
